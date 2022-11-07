@@ -8,10 +8,22 @@ const TodoForm = () => {
     completed: false
   })
 
+  const handleTaskInputChange = (e) => {
+    // console.log(todo)
+    setTodo({ ...todo, task: e.target.value })
+    // console.log(e.target)
+  }
+
   return (
     <form>
-      <input />
-      <button />
+      <input
+        name='task'
+        type='text'
+        value={todo.task}
+        onChange={handleTaskInputChange}
+      />
+      {/* {console.log(todo)} */}
+      <button type='submit' />
     </form>
   )
 }
