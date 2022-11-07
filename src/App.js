@@ -5,11 +5,15 @@ import TodoForm from './components/TodoForm';
 const App = () => {
   const [todos, setTodos] = useState([])
 
+  const addTodo = (todo) => {
+    setTodos([todo, ...todos])
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <p>React Todo</p>
-        <TodoForm />
+        <TodoForm addTodo={addTodo}/>
       </header>
     </div>
   );
