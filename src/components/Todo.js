@@ -5,6 +5,10 @@ const Todo = ( {todo, toggleComplete} ) => {
   const handleCheckboxClick = () => {
     toggleComplete(todo.id)
   }
+
+  const handleRemoveClick = () => {
+    removeTodo(todo.id)
+  }
   
   return (
     <div style={{ display: 'flex'}}>
@@ -17,7 +21,7 @@ const Todo = ( {todo, toggleComplete} ) => {
       >
         {todo.task}
       </li>
-      <button>X</button>
+      <button onClick={handleRemoveClick}>X</button>
     </div>
   )
 }

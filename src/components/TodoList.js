@@ -1,7 +1,7 @@
 import React from 'react';
 import Todo from './Todo';
 
-const TodoList = ( {todos, toggleComplete} ) => {
+const TodoList = ( {todos, toggleComplete, removeTodo} ) => {
   return (
     <ul>
       {todos.map(todo => 
@@ -9,6 +9,7 @@ const TodoList = ( {todos, toggleComplete} ) => {
           key={todo.id} 
           todo={todo}
           toggleComplete={toggleComplete}
+          removeTodo={removeTodo}
         />
       )}
     </ul>
