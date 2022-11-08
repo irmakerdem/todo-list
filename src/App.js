@@ -24,7 +24,7 @@ const App = () => {
     )
   }
 
-  const removeTodo = () => {
+  const removeTodo = (id) => {
     setTodos(todos.filter(todo => todo.id !== id))
   }
 
