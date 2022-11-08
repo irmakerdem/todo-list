@@ -1,7 +1,8 @@
 import { toHaveDescription } from '@testing-library/jest-dom/dist/matchers';
 import React, {useState} from 'react';
+import { v4 as uuidv4} from 'uuid';
 
-const TodoForm = () => {
+const TodoForm = ({ addTodo }) => {
   const [todo, setTodo] = useState({
     id: '',
     task: '',
@@ -14,8 +15,16 @@ const TodoForm = () => {
     // console.log(e.target)
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (todo.task.trim()) {
+      addTodo({ ...todo, id: uuidv4()})
+      setTodo({ ...todo, task:'' })
+    }
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input
         name='task'
         type='text'
@@ -23,7 +32,7 @@ const TodoForm = () => {
         onChange={handleTaskInputChange}
       />
       {/* {console.log(todo)} */}
-      <button type='submit' />
+      <button type='submit'>SUBMIT</button>
     </form>
   )
 }
