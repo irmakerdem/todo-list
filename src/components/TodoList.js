@@ -5,7 +5,7 @@ const TodoList = ( {todos} ) => {
   return (
     <ul>
       {todos.map(todo => {
-        {console.log(todos)}
+        // {console.log(todos)}
         <Todo 
           key={todo.id} 
           todo={todo}
