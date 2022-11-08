@@ -1,9 +1,14 @@
 import React from 'react';
 
-const Todo = ( {todo} ) => {
+const Todo = ( {todo, toggleComplete} ) => {
+  
+  const handleCheckboxClick = () => {
+    toggleComplete(todo.id)
+  }
+  
   return (
     <div style={{ display: 'flex'}}>
-      <input type='checkbox'/>
+      <input type='checkbox' onClick={handleCheckboxClick}/>
       <li 
         style={{
           color: 'white',
