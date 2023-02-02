@@ -22,6 +22,7 @@ Project can be viewed [here](https://todo-list-swart-pi.vercel.app/).
 - Material UI
 - HTML
 - CSS
+- Vercel
 
 ### Set Up
 1. Clone this [repository](https://github.com/irmakerdem/todo-list).
