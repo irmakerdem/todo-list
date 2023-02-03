@@ -7,6 +7,7 @@
 - [Set Up](#set-up)
 - [Features](#features)
 - [Future Features](#future-features)
+- [Reflections](#reflections)
 - [Contributors](#contributors)
 
 ### Introduction
@@ -39,6 +40,10 @@ Project can be viewed [here](https://todo-list-swart-pi.vercel.app/).
 ### Future Features
 - Update styling/design for better UX/UI
 - Make app responsive
+
+### Reflections 
+- This project was my first time using universally unique identifier (UUID). Using a package to create unique IDs generated an ID of 36 characters (32 hexadecimal characters and 4 hyphens).
+- This project was my first time deploying to Vercel. Installing the Vercel CLI was easy but when the CLI asked `Link to existing project?` I assumed it was 'y' since the project was already created on React and existed on GitHub but the correct answer was 'n'.
 
 ### Contributors
 - [Irmak Erdem](https://www.linkedin.com/in/irmakerdem/)
