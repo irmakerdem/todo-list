@@ -10,9 +10,7 @@ const TodoForm = ({ addTodo }) => {
   })
 
   const handleTaskInputChange = (e) => {
-    // console.log(todo)
     setTodo({ ...todo, task: e.target.value })
-    // console.log(e.target)
   }
 
   const handleSubmit = (e) => {
