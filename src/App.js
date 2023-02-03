@@ -30,8 +30,10 @@ const App = () => {
 
   return (
     <div className="App">
+      {/* {console.log(todos)} */}
       <header className="App-header">
-        <p>React Todo</p>
+        <h1>To Dos</h1>
+        <p>Enter chore below. Cross off when done. Delete when needed.</p>
         <TodoForm addTodo={addTodo}/>
         <TodoList 
           todos={todos}
